@@ -29,6 +29,9 @@ public class POOFigurasGeometricas {
         System.out.println("| 1) Calcular el area y perimetro de un Circulo    |");
         System.out.println("| 2) Calcular el area y perimetro de un Cuadrado   |");
         System.out.println("| 3) Calcular el area y perimetro de un Rectangulo |");
+        System.out.println("| 4) Calcular el area y perimetro de un Triangulo |");
+        System.out.println("| 5) Calcular el area y perimetro de un Pentagono |");
+        System.out.println("| 6) Calcular el area y perimetro de un Trapecio |");
         System.out.println("| *) Salir                                         |");
         System.out.println("+==================================================+");
         entradaTeclado = new Scanner(System.in);
@@ -75,6 +78,61 @@ public class POOFigurasGeometricas {
                 Rectangulo rectangulo = new Rectangulo(base, altura);
                 System.out.println("El Area del Rectangulo es: " + rectangulo.getArea());
                 System.out.println("El Perimetro del Rectangulo es: " + rectangulo.getPerimetro());
+                break;
+                case 4:
+                /* Se instancia un objeto de la Clase Círculo y posteriormente se modifica el valor
+                   de su propiedad "Radio" a través de un método accesor o setter (setRadio). */
+                Triangulo Tri = new Triangulo();
+                limpiarConsola();
+                System.out.println("+==================================================+");
+                System.out.println("| SubPrograma: Triangulo                             |");
+                System.out.println("+==================================================+");
+                System.out.print("Introduzca el valor de la Base: ");
+                float Base = (float)entradaTeclado.nextFloat();
+                System.out.print("Introduzca el valor de la Altura: ");
+                float Altura = (float)entradaTeclado.nextFloat();
+                Tri.setBase(Base);
+                Tri.setAltura(Altura);
+                System.out.println("El Area del Triandulo es: " + Tri.getArea());
+                System.out.println("El Perimetro del Triangulo es: " + Tri.getPerimetro());
+                break;
+                            case 5:
+                /* Se instancia un objeto de la Clase Círculo y posteriormente se modifica el valor
+                   de su propiedad "Radio" a través de un método accesor o setter (setRadio). */
+                Pentagono Pen = new Pentagono();
+                limpiarConsola();
+                System.out.println("+==================================================+");
+                System.out.println("| SubPrograma: Pentagono                            |");
+                System.out.println("+==================================================+");
+                System.out.print("Introduzca el valor del Lado: ");
+                float Lado = (float)entradaTeclado.nextFloat();
+                Pen.setLado(Lado);
+                System.out.println("El Area del Pentagono es: " + Pen.getArea());
+                System.out.println("El Perimetro del Pentagono es: " + Pen.getPerimetro());
+                break;
+                            case 6:
+                /* Se instancia un objeto de la Clase Círculo y posteriormente se modifica el valor
+                   de su propiedad "Radio" a través de un método accesor o setter (setRadio). */
+                Trapecio Tra = new Trapecio();
+                limpiarConsola();
+                System.out.println("+==================================================+");
+                System.out.println("| SubPrograma: Trapecio                             |");
+                System.out.println("+==================================================+");
+                System.out.print("Introduzca el valor de la Base Mayor: ");
+                float BaseMay = (float)entradaTeclado.nextFloat();
+                System.out.print("Introduzca el valor de la Base Menor: ");
+                float BaseMen = (float)entradaTeclado.nextFloat();
+                System.out.print("Introduzca el valor del Lado: ");
+                float LadoT = (float)entradaTeclado.nextFloat();
+                System.out.print("Introduzca el valor de la Altura: ");
+                float AlturaT = (float)entradaTeclado.nextFloat();
+                Tra.setAltura(AlturaT);
+                Tra.setBaseMay(BaseMay);
+                Tra.setBaseMen(BaseMen);
+                Tra.setLado(LadoT);
+                
+                System.out.println("El Area del Trapecio es: " + Tra.getArea());
+                System.out.println("El Perimetro del Trapecio es: " + Tra.getPerimetro());
                 break;
             default:
                 System.out.println("Salio del programa");
